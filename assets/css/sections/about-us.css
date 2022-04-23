@@ -1,0 +1,34 @@
+/* aboutUs */
+#aboutUs {
+	display: flex;
+	justify-content: center;
+	padding: 0 10%;
+	margin-top: 150px;
+	max-height: 900px;
+}
+.about-us-details-wrapper {
+	flex-basis: 60%;
+	box-sizing: border-box;
+}
+.about-us-details {
+	--border-radius: 30px;
+	background: #fef8fe;
+	margin: 5% 0;
+	padding: 5% 15%;
+	border: 2px solid var(--primary-color);
+	border-left: 0;
+	border-top-right-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+}
+.about-us-details > h1 {
+	color: var(--primary-color);
+}
+.about-us-details > p {
+	white-space: pre-line;
+}
+.about-us-img {
+	flex-basis: 40%;
+}
+.about-us-img > img {
+	height: 100%;
+}

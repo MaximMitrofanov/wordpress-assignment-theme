@@ -1,0 +1,44 @@
+#interested{
+  margin-top: 300px;
+  padding: 0px 5vw;
+  background-color: #f7f5f7;
+  position: relative;
+}
+
+.interested-label{
+  display: flex;
+  padding: 50px 0;
+  align-items: flex-end;
+}
+.interested-img{
+  display: flex;
+  position: relative;
+  left: 0;
+  justify-self: flex-end;
+  align-self: flex-end;
+  margin-right: 10vw;
+}
+.interested-img > img{
+  z-index: 2;
+}
+.heart{
+  z-index: 1;
+  position: absolute;
+  width: 500px;
+  bottom: 0;
+  left: 0;
+  fill: var(--primary-color);
+}
+.interested-form .form-group{
+  width: calc(33.333333% - 5.333333px)
+}
+.interested-form .form-group:nth-child(2){
+  margin: 0 16px
+}
+.interested-form .row-btn{
+  justify-content: center;
+}
+
+.interested-form .form-btn{
+  width: 60%;
+}

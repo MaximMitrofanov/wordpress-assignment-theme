@@ -1,0 +1,147 @@
+
+* {
+	font-family: 'Assistant', sans-serif;
+}
+
+button {
+	outline: 0;
+	background: 0;
+	border: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	direction: rtl;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+}
+input{
+	background: 0;
+	border: 0;
+	font-size: 22px;
+	font-family: 'Assistant', sans-serif;
+	outline: 0;
+	padding: 0 10px;
+}
+
+
+
+/* Contact Us + Modal */
+button.contact-us-btn {
+	cursor: pointer;
+	background: var(--secondary-color);
+	outline: 0;
+	border: 1px #fff solid;
+	border-top: 0;
+	color: #fff;
+	position: fixed;
+	z-index: 1000;
+	padding: 1rem;
+	top: 50%;
+	left: 0%;
+	transform: rotate(-90deg) translateY(-50%);
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.contact-us-btn:active {
+	background: #696969;
+}
+
+.contact-us-modal {
+	width: 447px;
+	height: 438px;
+	background-color: var(--secondary-color);
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	position: fixed;
+	top: 50%;
+	left: 3%;
+	transform: translateY(-50%);
+	opacity: 0;
+	z-index: -1000;
+	transition: opacity ease 200ms;
+}
+
+.contact-us-modal.modal-show {
+	opacity: 1;
+	z-index: 1000;
+}
+
+/* Extra Share Buttons */
+.quick-share {
+	position: fixed;
+	z-index: 1000;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-120%);
+}
+.quick-share > .avatar {
+	margin-bottom: 15px;
+}
+.avatar {
+	cursor: pointer;
+	color: #fff;
+	width: 45px;
+	height: 45px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.avatar.messenger {
+	background: linear-gradient(#00d8ff, #00b1ff);
+}
+.avatar.whatsapp {
+	background: #0a8f20;
+}
+.avatar.share {
+	background: var(--primary-color);
+}
+.avatar.linkedin {
+	background: #1077a8;
+}
+.avatar.ytb {
+	background: #fc3831;
+}
+.avatar.fb {
+	background: #1e4fac;
+}
+.avatar.twt {
+	background: #55acee;
+}
+.avatar.pinterest {
+	background: #cb2027;
+}
+
+.share-wrapper {
+	direction: ltr;
+	position: fixed;
+	z-index: 1000;
+	top: 50%;
+	left: 5px;
+	transform: translateY(200%);
+	display: flex;
+}
+.share-options-wrapper {
+	overflow: hidden;
+}
+.share-options-drawer {
+	display: flex;
+	transform: translateX(-100%);
+	transition: transform ease 200ms;
+}
+.share-options-drawer.active {
+	transform: translateX(0%);
+}
+.share-options-drawer > *,
+.share-wrapper > * {
+	margin-right: 15px;
+}

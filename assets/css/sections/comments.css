@@ -1,0 +1,18 @@
+#comments{
+  padding: 0 20vw;
+  text-align: center;
+  margin-top: 50px
+}
+.comment-content{
+  padding: 10px;
+  border: 2px solid var(--primary-color);
+  margin: 0 16px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.comments-carousel-arrow{
+  font-size: 50px;
+  color: var(--primary-color)
+}

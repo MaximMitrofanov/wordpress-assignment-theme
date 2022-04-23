@@ -1,0 +1,72 @@
+[data-carousel-wrapper] {
+	direction: ltr;
+	position: relative;
+}
+[data-carousel-slider] {
+	overflow: hidden;
+}
+[data-carousel-track] {
+	display: flex;
+	transition: transform 200ms ease;
+}
+[data-carousel-track] > div {
+	box-sizing: border-box;
+	flex-shrink: 0;
+}
+[data-carousel-arrow] {
+	position: absolute;
+	top: 50%;
+}
+[data-carousel-arrow='left'] {
+	left: 0;
+	transform: translateY(-50%) translateX(-100%);
+}
+[data-carousel-arrow='right'] {
+	left: 100%;
+	transform: translateY(-50%);
+}
+[data-elements-per-tab='5'] > div{
+	width: 20%;
+}
+[data-elements-per-tab='4'] > div{
+	width: 25%;
+}
+[data-elements-per-tab='3'] > div{
+	width: calc(100% / 3);
+}
+[data-elements-per-tab='2'] > div{
+	width: 50%;
+}
+[data-elements-per-tab='1'] > div{
+	width: 100%;
+}
+.shake-left {
+	animation-name: shakeItLeft;
+	animation-duration: 0.5s;
+}
+.shake-right {
+	animation-name: shakeItRight;
+	animation-duration: 0.5s;
+}
+.res-shake {
+	animation-name: none;
+}
+
+@keyframes shakeItLeft {
+	10% {
+		transform: translateX(-10px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}
+@keyframes shakeItRight {
+	10% {
+		transform: translateX(10px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}

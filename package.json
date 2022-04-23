@@ -1,0 +1,17 @@
+{
+  "name": "leosmedia",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "dev": "wp-scripts start"
+  },
+  "keywords": [],
+  "author": "Maxim Mitrofanov",
+  "license": "MIT",
+  "dependencies": {
+    "@wordpress/scripts": "^22.5.0",
+    "normalize.css": "^8.0.1"
+  }
+}

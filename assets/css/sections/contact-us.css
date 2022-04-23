@@ -1,0 +1,42 @@
+/* midContactUs */
+#midContactUs {
+	background: var(--secondary-color);
+	text-align: center;
+	padding: 20px 0%;
+	color: #fff;
+}
+
+#midContactUs > h1 {
+	margin: 8px 0;
+}
+#midContactUs > h2 {
+	margin: 8px 0;
+}
+#midContactUs > form {
+	height: 200px;
+}
+
+.contact-us-info{
+	padding: 0 25%;
+}
+
+.contactus-form{
+	padding: 0 20%;
+}
+.contactus-row-1 > .form-group{
+	width: calc(33.333333% - 5.333333px)
+}
+.form-group-middle{
+	margin: 0 8px;
+}
+.contactus-row-2 > .form-group{
+	width: calc(60% - 8px);
+	margin-left: 8px;
+}
+.contactus-row-2 > .form-btn{
+	width: 40%;
+	height: 60px;
+}
+.contactus-row-2 > .form-btn .btn-content{
+	font-size: 30px;
+}
