@@ -3,95 +3,100 @@
 	display: flex;
 	border-radius: 10px;
 	text-align: right;
-  overflow: hidden;
-  height: 60px;
+	overflow: hidden;
+	height: 60px;
 }
 .form-group > label {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
-select{
-  width: 100%;
-  font-size: 24px;
-  font-weight: 500;
-  padding: 0 10px;
-  appearance: none;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="black" height="40" width="40" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>');
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 50%;
+select {
+	width: 100%;
+	font-size: 24px;
+	font-weight: 500;
+	padding: 0 10px;
+	appearance: none;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="black" height="40" width="40" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>');
+	background-repeat: no-repeat;
+	background-position-x: 10px;
+	background-position-y: 50%;
 }
-select::-ms-expand{
-  background-image: none;
+select::-ms-expand {
+	background-image: none;
 }
 
 select * {
-  background-color: #fff;
+	background-color: #fff;
 }
-select *:invalid{
-  background-color: red;
+select *:invalid {
+	background-color: red;
 }
 
 .form-group > label > .icon {
 	padding: 0 16px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
 	font-size: 24px;
 	color: #fff;
 	background-color: var(--primary-color);
 	border-radius: 10px;
 }
 .form-group > label > .icon > * {
-  align-self: center;
-
+	align-self: center;
 }
 
 .form-group > label > .text {
-  color: #000;
+	color: #000;
 	font-size: 24px;
 	margin-right: 10px;
-  white-space: nowrap;
-  font-weight: 500;
+	white-space: nowrap;
+	font-weight: 500;
 }
 
 .form-btn {
-  cursor: pointer;
+	cursor: pointer;
 	display: flex;
 	width: 100%;
-  padding: 0;
-  border-radius: 10px;
-  box-shadow: 2px 2px 60px 1px rgba(0, 0, 0, 0.3);
-  min-height: 60px;
+	padding: 0;
+	border-radius: 10px;
+	box-shadow: 2px 2px 60px 1px rgba(0, 0, 0, 0.3);
+	min-height: 60px;
 }
-.btn-content{
-  display: flex;
-  flex-basis: 100%;
-  background: #fff;
-	font-size: 33px;
-  overflow: hidden;
-  color: #fff;
-  border-radius: 10px;
-  height: 100%;
+.btn-content {
+	display: flex;
+	flex-basis: 100%;
+	background: #fff;
+	font-size: 36px;
+	overflow: hidden;
+	color: #fff;
+	border-radius: 10px;
+	height: 100%;
+	white-space: nowrap;
 }
-.btn-content > *{
-  display: flex;
-  height: 100%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+.btn-content > * {
+	display: flex;
+	height: 100%;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
 .btn-text {
 	width: 80%;
-  background: var(--primary-color);
-
+	background: var(--primary-color);
 }
 .btn-icon {
 	width: 20%;
-  margin-right: 3px;
-  font-size: 40px;
-  background: var(--primary-color);
-  filter: brightness(80%)
+	margin-right: 3px;
+	font-size: 40px;
+	background: var(--primary-color);
+	filter: brightness(80%);
+}
+/* Mobile */
+@media screen and (max-width: 1500px) {
+	.btn-content {
+		font-size: 24px !important;
+	}
 }

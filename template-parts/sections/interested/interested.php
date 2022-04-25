@@ -1,12 +1,12 @@
 <section id="interested">
   <div class="row">
-    <div class="interested-form col-7">
+    <div class="interested-form col-7 flex-wrap">
       <div class="interested-label">
         <h1 class="color-primary font-l">מעוניינים בייעוץ ראשוני?</h1>
         <h2 class="color-primary font-m b-500">אל תחכו, השאירו פרטים ואחזור בהקדם:</h2>
       </div>
       <form action="none" class='mt-1 interested-form'>
-        <div class="row">
+        <div class="row flex-wrap">
           <div class="form-group col-4">
             <label for="name">
               <span class="icon">
@@ -28,16 +28,16 @@
           <div class="form-group col-4">
             <label for="name">
               <span class="icon">
-                <i class="fa-solid fa-phone-flip"></i>
+                <i class="fa-solid fa-envelope"></i>
               </span>
               <span class="text">מייל:</span>
             </label>
-            <input type="text">
+            <input type="text" placeholder="לא חובה">
           </div>
 
         </div>
 
-        <div class="row mt-3 row-btn"> 
+        <div class="row mt-3 row-btn">
           <button class='form-btn'>
             <div class='btn-content font-m'>
               <span class='btn-text'>כן אני מעוניין בייעוץ ראשוני</span>
@@ -45,7 +45,7 @@
             </div>
           </button>
         </div>
-        
+
       </form>
     </div>
     <div class="interested-img col-5">

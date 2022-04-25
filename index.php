@@ -4,9 +4,10 @@ get_header();
 
 <style>
   :root {
-	--primary-color: <?php echo get_theme_mod('lm-general-callout-primary')?>;
-	--secondary-color: <?php echo get_theme_mod('lm-general-callout-accent')?>;
-}
+    --primary-color: <?php echo get_theme_mod('lm-general-callout-primary') ?>;
+    --secondary-color: <?php echo get_theme_mod('lm-general-callout-accent') ?>;
+    --light-tone-color: <?php echo get_theme_mod('lm-general-callout-light') ?>;
+  }
 </style>
 
 <aside class="extra-wrapper">
@@ -21,40 +22,40 @@ get_header();
 
 <!-- Landing Section -->
 <?php
-get_template_part('template-parts/sections/landing/landing', null)
-?>
+get_template_part('template-parts/sections/landing/landing', null);
 
-<!-- Expertise Section -->
-<?php
-get_template_part('template-parts/sections/expertise/expertise')
-?>
 
-<!-- Why us Section -->
-<?php
+// <!-- Expertise Section -->
+
+get_template_part('template-parts/sections/expertise/expertise');
+
+
+// <!-- Why us Section -->
 get_template_part('template-parts/sections/why-us/why-us', null);
-?>
 
-<!-- Mid Contact us Section -->
-<?php
+
+// <!-- Mid Contact us Section -->
+
 get_template_part('template-parts/sections/contact-us/contact-us', null);
-?>
 
-<!-- About us Section -->
-<?php
+
+// <!-- About us Section -->
+
 get_template_part('template-parts/sections/about-us/about-us', null);
-?>
 
-<!-- Comments Section -->
-<?php
+// <!-- Comments Section -->
+
 get_template_part('template-parts/sections/comments/comments', null);
-?>
 
-<!-- Interested Section -->
-<?php
+
+// <!-- Go top item -->
+get_template_part('template-parts/extra/go-top', null);
+
+// <!-- Interested Section -->
 get_template_part('template-parts/sections/interested/interested', null);
-?>
 
 
-<?php
+
+
 get_footer();
 ?>

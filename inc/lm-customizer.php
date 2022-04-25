@@ -1,6 +1,7 @@
 <?php
 function lm_register_customize_sections($wp_customize)
 {
+  lm_floating_callout_section($wp_customize);
   lm_comments_callout_section($wp_customize);
   lm_aboutus_callout_section($wp_customize);
   lm_contactus_callout_section($wp_customize);
@@ -12,14 +13,15 @@ function lm_register_customize_sections($wp_customize)
 }
 
 
-function lm_sanitize_number_absint( $number, $setting ) {
-  $number = absint( $number );
+function lm_sanitize_number_absint($number, $setting)
+{
+  $number = absint($number);
 
-  if($number <= 0 or $number > 5){
+  if ($number <= 0 or $number > 5) {
     return $setting->default;
   }
 
-  return ( $number ? $number : $setting->default );
+  return ($number ? $number : $setting->default);
 }
 
 /** GENERAL THEME */
@@ -48,6 +50,16 @@ function lm_general_callout_section($wp_customize)
     'label' => 'Accent Color',
     'section' => 'lm-general-callout-section',
     'settings' => 'lm-general-callout-accent',
+  ]));
+
+  // Light Theme Color
+  $wp_customize->add_setting('lm-general-callout-light', [
+    'default' => '#f1f1f3',
+  ]);
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'lm-general-callout-light-control', [
+    'label' => 'Light Theme Color',
+    'section' => 'lm-general-callout-section',
+    'settings' => 'lm-general-callout-light',
   ]));
 }
 
@@ -164,6 +176,18 @@ function lm_landing_callout_section($wp_customize)
     'label' => 'Phone Number Color',
     'section' => 'lm-landing-callout-section',
     'settings' => 'lm-landing-callout-phone-number-color',
+  ]));
+
+  // Display form
+  $wp_customize->add_setting('lm-landing-callout-display-form', [
+    'default' => 'Yes',
+  ]);
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'lm-landing-callout-display-form-control', [
+    'label' => 'Display form in this section?',
+    'section' => 'lm-landing-callout-section',
+    'settings' => 'lm-landing-callout-display-form',
+    'type' => 'select',
+    'choices' => ['Yes' => 'Yes', 'No' => 'No']
   ]));
 
   // Background Image
@@ -476,6 +500,16 @@ function lm_aboutus_callout_section($wp_customize)
     'section' => 'lm-aboutus-callout-section',
     'settings' => 'lm-aboutus-callout-contentbg-color',
   ]));
+
+  // Form Select
+  $wp_customize->add_setting('lm-aboutus-callout-form-select', [
+    'default' => 'דוגמא, דוגמא, דוגמא',
+  ]);
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'lm-aboutus-callout-form-select-control', [
+    'label' => 'Form Select Options (Splitted by comma ",")',
+    'section' => 'lm-aboutus-callout-section',
+    'settings' => 'lm-aboutus-callout-form-select',
+  ]));
 }
 
 /**COMMENTS SECTION */
@@ -483,7 +517,7 @@ function lm_comments_callout_section($wp_customize)
 {
   $wp_customize->add_section('lm-comments-callout-section', [
     'title' => 'Comments Section',
-    'priorit' => 7
+    'priority' => 7
   ]);
 
   // Display?
@@ -520,9 +554,62 @@ function lm_comments_callout_section($wp_customize)
     'type' => 'number',
     'input_attrs' => [
       'min' => 1,
-      'max' => 10
+      'max' => 5
     ]
   ]));
+}
+
+/**Floating */
+function lm_floating_callout_section($wp_customize)
+{
+  $wp_customize->add_section('lm-floating-callout-section', [
+    'title' => 'Floating Items',
+    'priority' => 8
+  ]);
+
+  // Display?
+  $wp_customize->add_setting('lm-floating-callout-display-sq', [
+    'default' => 'Yes',
+  ]);
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'lm-floating-callout-display-sq-control', [
+    'label' => 'Display quick share?',
+    'section' => 'lm-floating-callout-section',
+    'settings' => 'lm-floating-callout-display-sq',
+    'type' => 'select',
+    'choices' => ['Yes' => 'Yes', 'No' => 'No']
+  ]));
+  $wp_customize->add_setting('lm-floating-callout-display-s', [
+    'default' => 'Yes',
+  ]);
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'lm-floating-callout-display-s-control', [
+    'label' => 'Display share drawer?',
+    'section' => 'lm-floating-callout-section',
+    'settings' => 'lm-floating-callout-display-s',
+    'type' => 'select',
+    'choices' => ['Yes' => 'Yes', 'No' => 'No']
+  ]));
+  $wp_customize->add_setting('lm-floating-callout-display-m', [
+    'default' => 'Yes',
+  ]);
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'lm-floating-callout-display-m-control', [
+    'label' => 'Display contact modal?',
+    'section' => 'lm-floating-callout-section',
+    'settings' => 'lm-floating-callout-display-m',
+    'type' => 'select',
+    'choices' => ['Yes' => 'Yes', 'No' => 'No']
+  ]));
+  $wp_customize->add_setting('lm-floating-callout-display-gt', [
+    'default' => 'Yes',
+  ]);
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'lm-floating-callout-display-gt-control', [
+    'label' => 'Display go top button?',
+    'section' => 'lm-floating-callout-section',
+    'settings' => 'lm-floating-callout-display-gt',
+    'type' => 'select',
+    'choices' => ['Yes' => 'Yes', 'No' => 'No']
+  ]));
+
+  
 }
 
 function share_callout($wp_customize)
@@ -537,6 +624,7 @@ function share_callout($wp_customize)
   // Section
   $wp_customize->add_section('lm-share-callout-section', [
     'title' => 'Share Callout',
+    'priority' => 9,
     'description' => 'Here you can change what share options are available if any'
   ]);
 

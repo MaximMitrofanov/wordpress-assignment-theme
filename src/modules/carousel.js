@@ -2,6 +2,9 @@ export function createCarousel() {
 	const carouselArray = document.querySelectorAll('[data-carousel-wrapper]');
 
 	carouselArray.forEach((item) => {
+		// Phone Media Query Match
+		const phoneMatchMQ = window.matchMedia('(max-width: 1000px)');
+
 		// Current Tab
 		let carouselTab = 0;
 
@@ -16,16 +19,31 @@ export function createCarousel() {
 		const sliderEl = item.querySelector('[data-carousel-slider]');
 
 		// How many items viewed per tab
-		const elementsPerTab =
-			Number(trackEl.getAttribute('data-elements-per-tab')); // Default is 4
+		const elementsPerTab = Number(
+			trackEl.getAttribute('data-elements-per-tab')
+		); // Default is 4
 
 		// How many items inside the track
 		const trackTotalEl = trackEl.children.length;
 
-
 		// How many tabs there are
-		const trackMaxTab = Math.ceil(trackTotalEl / elementsPerTab) - 1;
- 
+		let trackMaxTab = phoneMatchMQ.matches
+			? trackTotalEl - 1
+			: Math.ceil(trackTotalEl / elementsPerTab) - 1;
+			
+
+		phoneMatchMQ.onchange = (e) => {
+			if (e.matches) {
+				trackMaxTab = 1;
+				trackEl.style.transform = 'translateX(0%)';
+				carouselTab = 0;
+			} else {
+				trackMaxTab = Math.ceil(trackTotalEl / elementsPerTab) - 1;
+				trackEl.style.transform = 'translateX(0%)';
+				carouselTab = 0;
+			}
+		};
+
 		const handleCarouselButton = (direction) => {
 			const directionNum =
 				(direction === 'left' && -1) || (direction === 'right' && 1);

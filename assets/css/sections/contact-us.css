@@ -13,15 +13,15 @@
 	margin: 8px 0;
 }
 #midContactUs > form {
-	height: 200px;
+	height: auto;
 }
 
 .contact-us-info{
-	padding: 0 25%;
+	padding: 0 25vw;
 }
 
 .contactus-form{
-	padding: 0 20%;
+	padding: 0 20vw;
 }
 .contactus-row-1 > .form-group{
 	width: calc(33.333333% - 5.333333px)
@@ -39,4 +39,31 @@
 }
 .contactus-row-2 > .form-btn .btn-content{
 	font-size: 30px;
+}
+@media screen and (max-width: 1000px) {
+	.contact-us-info{
+		padding: 0 5vw;
+	}
+	
+	.contactus-form{
+		padding: 0 5vw;
+	}
+	.contactus-row-1 > .form-group{
+		width: 100%;
+	}
+	.form-group-middle{
+		margin: 8px 0;
+	}
+	.contactus-row-2 > .form-group{
+		width: 100%;
+		margin-bottom: 8px;
+		margin-left: 0px;
+	}
+	.contactus-row-2 > .form-btn{
+		width: 100%;
+		height: 60px;
+	}
+	.contactus-row-2 > .form-btn .btn-content{
+		font-size: 24px;
+	}
 }

@@ -1,3 +1,4 @@
+<?php if (get_theme_mod('lm-floating-callout-display-sq') === 'Yes') : ?>
 <div class="quick-share">
   <?php
   get_template_part('template-parts/extra/share', 'avatar', [
@@ -12,3 +13,4 @@
   ]);
   ?>
 </div>
+<?php endif?>

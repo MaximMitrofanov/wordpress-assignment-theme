@@ -70,3 +70,12 @@
 		transform: translateX(0px);
 	}
 }
+
+/* Mobile */
+@media screen and (max-width: 1000px) {
+
+	[data-elements-per-tab] > div{
+		width: 100% !important;
+	}
+
+}

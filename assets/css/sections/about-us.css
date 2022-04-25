@@ -2,7 +2,7 @@
 #aboutUs {
 	display: flex;
 	justify-content: center;
-	padding: 0 10%;
+	padding: 0 10vw;
 	margin-top: 150px;
 	max-height: 900px;
 }
@@ -14,7 +14,7 @@
 	--border-radius: 30px;
 	background: #fef8fe;
 	margin: 5% 0;
-	padding: 5% 15%;
+	padding: 5% 5vw;
 	border: 2px solid var(--primary-color);
 	border-left: 0;
 	border-top-right-radius: var(--border-radius);
@@ -31,4 +31,27 @@
 }
 .about-us-img > img {
 	height: 100%;
+}
+/* Mobile */
+@media screen and (max-width: 1000px) {
+	#aboutUs {
+		padding: 0 5vw;
+		margin-top: 16px;
+	}
+	.about-us-details-wrapper {
+		flex-basis: 100%;
+	}
+	.about-us-details {
+		--border-radius: 30px;
+		background: #fef8fe;
+		margin: 5% 0;
+		padding: 5% 10vw;
+		border: 2px solid var(--primary-color);
+		border-left: 2px solid var(--primary-color);
+		border-top-left-radius: var(--border-radius);
+		border-bottom-left-radius: var(--border-radius);
+	}
+	.about-us-img {
+		display: none;
+	}
 }

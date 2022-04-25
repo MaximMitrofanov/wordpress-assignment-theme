@@ -5,13 +5,13 @@ $fb = get_theme_mod('lm-share-callout-fb');
 $twt = get_theme_mod('lm-share-callout-twt');
 $pinterest = get_theme_mod('lm-share-callout-pinterest');
 
-if ($linkedin || $ytb || $fb || $twt || $pinterest) : ?>
+if (($linkedin || $ytb || $fb || $twt || $pinterest) && get_theme_mod('lm-floating-callout-display-s') === 'Yes') : ?>
   <div class="share-wrapper">
     <button class="avatar share font-s" data-drawer="shareDrawer">
       <i class="fa-solid fa-share-nodes"></i>
     </button>
-    <div class="share-options-wrapper">
-      <div class="share-options-drawer" id="shareDrawer">
+    <div class="share-options-wrapper" id="shareDrawer">
+      <div class="share-options-drawer">
 
         <?php if ($linkedin) {
           get_template_part('template-parts/extra/share', 'avatar', [

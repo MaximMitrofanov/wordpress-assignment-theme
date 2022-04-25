@@ -30,37 +30,39 @@
         <h2 class="font-m b-400 lm-landing-subhead"><?php echo get_theme_mod('lm-landing-callout-subhead') ?></h2>
       </div>
 
-      <form action="none" class='mt-1 landing-form'>
-        <div class="row">
-          <div class="form-group col-6">
-            <label for="name">
-              <span class="icon">
-                <i class="fa-solid fa-user"></i>
-              </span>
-              <span class="text">שם מלא:</span>
-            </label>
-            <input type="text">
-          </div>
-          <div class="form-group col-6">
-            <label for="name">
-              <span class="icon">
-                <i class="fa-solid fa-phone-flip"></i>
-              </span>
-              <span class="text">טלפון:</span>
-            </label>
-            <input type="text">
-          </div>
-        </div>
-
-        <div class="row">
-          <button class='form-btn mt-3'>
-            <div class='btn-content'>
-              <span class='btn-text'>כן אני צריך ייעוץ עכשיו</span>
-              <span class='btn-icon'><i class="fa-solid fa-arrow-left"></i></span>
+      <?php if (get_theme_mod('lm-landing-callout-display-form')  === 'Yes') : ?>
+        <form action="none" class='mt-1 landing-form'>
+          <div class="row flex-wrap">
+            <div class="form-group col-6">
+              <label for="name">
+                <span class="icon">
+                  <i class="fa-solid fa-user"></i>
+                </span>
+                <span class="text">שם מלא:</span>
+              </label>
+              <input type="text">
             </div>
-          </button>
-        </div>
-      </form>
+            <div class="form-group col-6">
+              <label for="name">
+                <span class="icon">
+                  <i class="fa-solid fa-phone-flip"></i>
+                </span>
+                <span class="text">טלפון:</span>
+              </label>
+              <input type="text">
+            </div>
+          </div>
+
+          <div class="row">
+            <button class='form-btn mt-3'>
+              <div class='btn-content'>
+                <span class='btn-text'>כן אני צריך ייעוץ עכשיו</span>
+                <span class='btn-icon'><i class="fa-solid fa-arrow-left"></i></span>
+              </div>
+            </button>
+          </div>
+        </form>
+      <?php endif ?>
     </div>
   </section>
 

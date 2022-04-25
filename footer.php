@@ -5,7 +5,7 @@ if (function_exists('the_custom_logo')) {
 }
 ?>
 <footer style="min-height: 100px; background-color: #000; display: flex; justify-content: center; align-items: center">
-  <div class=" watermark" style='width: 10%; text-align: center'>
+  <div class=" watermark" style='width: 20%; text-align: center'>
     <img src="<?php echo $logo[0] ?>" alt="">
   </div>
 </footer>

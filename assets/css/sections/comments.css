@@ -13,6 +13,20 @@
 }
 
 .comments-carousel-arrow{
+  box-sizing: border-box;
   font-size: 50px;
   color: var(--primary-color)
+}
+
+/* Mobile */
+@media screen and (min-width: 319px) and (max-width: 481px) {
+  #comments{
+    padding: 0 10vw;
+    text-align: center;
+    margin-top: 50px
+  }
+  .comments-carousel-arrow{
+    font-size: 25px;
+    color: var(--primary-color)
+  }
 }
